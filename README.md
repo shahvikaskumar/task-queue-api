@@ -27,20 +27,20 @@ This project is a Node.js API that handles task processing with rate limiting an
 
 2. **Install dependencies**:
 
-   ```npm install
-
+   ```bash
+   npm install
    ```
 
 3. **Ensure Redis is running**:
 
-   ```docker run -d --name redis -p 6379:6379 redis
-
+   ```bash
+   docker run -d --name redis -p 6379:6379 redis
    ```
 
 4. **Run the application**:
 
-   ```npm start
-
+   ```bash
+   npm start
    ```
 
 ## API Endpoint
@@ -49,7 +49,8 @@ This project is a Node.js API that handles task processing with rate limiting an
 
   - **Request Body**:
 
-  ```{
+  ```bash
+  {
       "user_id":"123"
   }
   ```
