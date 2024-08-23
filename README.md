@@ -19,7 +19,51 @@ This project is a Node.js API that handles task processing with rate limiting an
 ## Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/shahvikaskumar/task-queue.git
    cd node-api-rate-limiter
    ```
+
+2. **Install dependencies**:
+
+   ```npm install
+
+   ```
+
+3. **Ensure Redis is running**:
+
+   ```docker run -d --name redis -p 6379:6379 redis
+
+   ```
+
+4. **Run the application**:
+
+   ```npm start
+
+   ```
+
+## API Endpoint
+
+- **POST /api/v1/task**: This endpoint processes a task for a given user.
+
+  - **Request Body**:
+
+  ```{
+      "user_id":"123"
+  }
+  ```
+
+## Code Structure
+
+- **Index.js**: The entry point for the application, which sets up the clustered API and defines the main route.
+
+- **components/ratelimiter.js**: Implements the rate limiting logic using Redis.
+
+- **components/taskprocessor.js**: Handles task processing and logging.
+
+- **components/tasklogger.js**: Logs task completion details to a file.
+
+## Running Tests
+
+To test the API, you can use tools like Postman or curl.
